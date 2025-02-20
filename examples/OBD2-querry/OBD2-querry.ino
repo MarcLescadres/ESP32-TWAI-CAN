@@ -73,6 +73,7 @@ void loop() {
         Serial.printf("Received frame: %03X  \r\n", rxFrame.identifier);
         if(rxFrame.identifier == 0x7E8) {   // Standard OBD2 frame responce ID
             Serial.printf("Collant temp: %3d°C \r\n", rxFrame.data[3] - 40); // Convert to °C
+            
         }
     }
 }
